@@ -1,0 +1,18 @@
+@startuml
+title CU01 - Registrar solicitud (ejemplo ficticio)
+actor Persona
+boundary PantallaSolicitud
+control ServicioSolicitudes
+database RepositorioSolicitudes
+
+Persona -> PantallaSolicitud: confirmar(datos)
+activate PantallaSolicitud
+PantallaSolicitud -> ServicioSolicitudes: registrar(datos)
+activate ServicioSolicitudes
+ServicioSolicitudes -> RepositorioSolicitudes: guardar(solicitud)
+RepositorioSolicitudes --> ServicioSolicitudes: solicitudGuardada
+ServicioSolicitudes --> PantallaSolicitud: solicitudGuardada
+deactivate ServicioSolicitudes
+PantallaSolicitud --> Persona: mostrar confirmación
+deactivate PantallaSolicitud
+@enduml

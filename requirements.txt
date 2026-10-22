@@ -1,0 +1,2 @@
+# Solo tooling Python de desarrollo; los scripts Node no usan npm.
+Pillow>=10,<14

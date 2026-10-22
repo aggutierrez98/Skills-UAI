@@ -1,0 +1,14 @@
+# Entornos y caches locales
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+
+# Resultados de ejemplo y snapshots locales de documentos
+salidas/
+.tmp/
+*.log
+.DS_Store
+Thumbs.db

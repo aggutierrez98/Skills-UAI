@@ -1,0 +1,19 @@
+@startuml
+title Solicitudes - Clases (ejemplo ficticio)
+class Solicitud {
+  +descripcion: String
+}
+class PantallaSolicitud {
+  +confirmar(datos)
+}
+class ServicioSolicitudes {
+  +registrar(datos): Solicitud
+}
+interface RepositorioSolicitudes {
+  +guardar(solicitud: Solicitud): Solicitud
+}
+PantallaSolicitud --> ServicioSolicitudes
+ServicioSolicitudes --> RepositorioSolicitudes
+ServicioSolicitudes ..> Solicitud
+RepositorioSolicitudes ..> Solicitud
+@enduml
